@@ -1,0 +1,63 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "./init";
+@import "./mixins";
+
+.hidden, .desktop-only,.p-carousel .p-carousel-indicators{
+    display: none;
+}
+
+.float-l{
+    float: left;
+}
+.float-r{
+    float: right;
+}
+.clear-a:after{
+    clear:both;
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+}
+
+body{
+    font-family: $reg-font;
+    font-weight: 400;
+    font-size: 15px;
+    background: $prime-color;
+    margin: 0;
+    padding: 0;
+    color:#fff;
+}
+h1,h2,h3{
+    font-family: $bold-font;
+    font-weight: 400;
+}
+.btn{
+    @include btn;
+}
+.btn-border{
+    @include btn-border;
+}
+.btn-fill{
+    @include btn-fill;
+}
+.p-carousel-container{
+    position: relative;
+    button.p-ripple.p-link{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        left: 0;
+        top: 36%;
+        color: $btn-bg;
+        z-index: 1;
+        box-shadow: 0 0 5px #333;
+        &.p-carousel-next{
+            left: auto;
+            right: 0;
+        }
+    }
+}

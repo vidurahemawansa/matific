@@ -1,0 +1,39 @@
+@import '../../../init';
+
+.why-matific-wrapper{
+    color:$prime-text;
+    background: #fff;
+    width: 100%;
+    padding: 50px 0;
+    h2{
+        color: $heading-text;
+        margin: 0 0 15px;
+    }
+    ol{
+        list-style: none;
+        padding: 0;
+        margin:  0;
+        counter-reset: items;
+        font-size: 0;
+        line-height: 0;
+        li{
+            display: block;
+            width: 100%;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border-left: 2px solid #e8e9ea;
+            font-size: 14px;
+            line-height: 1.5;
+            &::before{
+                content: counters(items,".");
+                counter-increment: items;
+                display: block;
+                font-family: $bold-font;
+                font-size: 2em;
+                line-height: 1;
+                margin: 0 0 10px;
+                color: $heading-text;
+            }
+        }
+    }
+}

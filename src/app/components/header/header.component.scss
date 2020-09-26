@@ -1,0 +1,261 @@
+@import "../../../init";
+
+.header{
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    .left-wrapper{
+        position: relative;
+        width: 100%;
+        .menu-icon-wrapper{
+            background: $btn-bg;
+            border-radius: 50%;
+            overflow: hidden;
+            width: 32px;
+            height: 32px;
+            top: 12px;
+            left: 0;
+            color: #fff;
+            position: absolute;
+            i{
+                font-size: 16px;
+                margin: 7px 0 0;
+            }
+        }
+        .tel-wrapper{
+            left: auto;
+            right: 0;
+            position: absolute;
+            top: 0;
+            i{
+                margin: 15px 5px 0 0;
+                font-size: 17px;
+                color: #fff;
+            }
+        }
+        img{
+            margin: 12px 0 0;
+            max-width: 96px;
+        }
+    }
+    .right-wrapper{
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255,255,255,0.95);
+        display: none;
+        .fa-window-close-o{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 28px;
+            color: $prime-text;
+        }
+        .main-menu{
+            ul{
+                list-style: none;
+                margin: 40px 0 0;
+                padding: 0;
+                li{
+                    a{
+                        display: block;
+                        text-align: center;
+                        line-height: 40px;
+                        color: $prime-text;
+                        text-transform: capitalize;
+                        font-size: 1.1em;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .btn{
+            display: block;
+            margin: 10px auto 25px;
+            width: 90%;
+            max-width: 200px;
+        }
+        .btn-border{
+            color: $btn-bg;
+        }
+    }
+
+    &.active{
+        background: #fff;
+        color: $prime-text;
+        padding: 0 15px 5px;
+        box-shadow: 0 0 5px #000;
+        .left-wrapper{
+            .logo{
+                display: none;
+                &.hidden{
+                    display: inline;
+                }
+            }
+            .tel-wrapper{
+                i{
+                    color: $prime-text;
+                }
+            }
+        }
+
+        .right-wrapper{
+            .main-menu{
+                ul{
+                    li{
+                        a{
+                            color: $prime-text;
+                            &:hover{
+                                color: $btn-bg;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn{
+                
+                &.btn-border{
+                    color: $btn-bg;
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .desktop-only{
+        display: block;
+    }
+    .mobile-only{
+        display: none;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        .left-wrapper{
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            img{
+                align-self: flex-start;
+            }
+            .flag-wrapper{
+                margin: 18px 0 0 30px;
+                .flag{
+                    img{
+                        margin: 2px 5px 0 0;
+                        box-shadow: 0 0 2px #FFF;
+                    }
+                    span{
+                        margin: 1px 0 0;
+                        padding: 0;
+                        font-size: 10px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .tel-wrapper{
+                position: relative;
+                top: auto;
+                margin: 4px 0 0 35px;
+                i{
+                    margin: 16px 5px 0 0;
+                    font-size: 15px;
+                }
+                span{
+                    margin: 11px 0 0 3px;
+                    font-size: 0.9em;
+                }
+            }
+        }
+        .right-wrapper{
+            position: relative;
+            display: flex;
+            width: auto;
+            height: auto;
+            background: none;
+            flex-direction: row;
+            .fa-window-close-o{
+                display: none;
+            }
+            .main-menu{
+                ul{
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0;
+                    li{
+                        a{
+                            line-height: 50px;
+                            color: #fff;
+                            font-size: 1em;
+                            padding: 0 10px;
+                        }
+                    }
+                }
+            }
+            .btn{
+                margin: 8px 10px 0;
+                width: auto;
+                padding: 0 12px;
+                height: 32px;
+                &.btn-border{
+                    color: #fff;
+                }
+            }
+        }
+        &:hover{
+            background: #fff;
+            color: $prime-text;
+            .left-wrapper{
+                .logo{
+                    display: none;
+                    &.hidden{
+                        display: inline;
+                    }
+                }
+                .tel-wrapper{
+                    i{
+                        color: $prime-text;
+                    }
+                }
+            }
+
+            .right-wrapper{
+                .main-menu{
+                    ul{
+                        li{
+                            a{
+                                color: $prime-text;
+                                &:hover{
+                                    color: $btn-bg;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn{
+                    
+                    &.btn-border{
+                        color: $btn-bg;
+                    }
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+        }
+    }
+}

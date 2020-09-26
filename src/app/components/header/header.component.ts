@@ -8,7 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 @HostListener("window:scroll", ['$event'])
 export class HeaderComponent implements OnInit {
   activeHeader:boolean = false;
-
+  rtl:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
@@ -20,6 +20,14 @@ export class HeaderComponent implements OnInit {
       this.activeHeader = true;
     }else{
       this.activeHeader = false;
+    }
+  }
+
+  changeLan(lang:string){
+    if(lang == "en"){
+      this.rtl=true;
+    }else{
+      this.rtl=false;
     }
   }
 }

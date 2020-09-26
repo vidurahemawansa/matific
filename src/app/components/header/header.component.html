@@ -3,11 +3,11 @@
         <img src="../../../assets/images/matific-logo-white.png" class="logo" alt="Matific"/>
         <img src="../../../assets/images/matific-logo-black.png" class="logo hidden" alt="Matific"/>
         <div class="flag-wrapper desktop-only">
-            <div class="flag clear-a au">
+            <div [className]="rtl ? 'flag clear-a au hidden' : 'flag clear-a au'" (click)="changeLan('en')">
                 <img class="float-l" src="../../../assets/flags/au.png" alt="Austrailia"/>
                 <span class="float-l">En</span>
             </div>
-            <div class="flag clear-a israel hidden">
+            <div [className]="rtl ? 'flag clear-a israel' : 'flag clear-a israel hidden'" (click)="changeLan('he')">
                 <img class="float-l" src="../../../assets/flags/is.png" alt="Austrailia"/>
                 <span class="float-l">He</span>
             </div>

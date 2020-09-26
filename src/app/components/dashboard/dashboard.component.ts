@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { VideoComponent } from '../modals/video/video.component';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,11 +10,12 @@ import { VideoComponent } from '../modals/video/video.component';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private videoModalService:ModalService) { }
 
   ngOnInit(): void {
   }
-  openModal() {
+  openModal(path:string) {
+    this.videoModalService.setModalPath(path);
     const modalRef = this.modalService.open(VideoComponent);
   }
 

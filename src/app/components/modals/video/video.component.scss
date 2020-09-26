@@ -49,6 +49,21 @@
             }
         }
     }
+    .modal-body{
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 62.5% !important; /* 8:5 Aspect Ratio */
+    }
+    .responsive-iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) {

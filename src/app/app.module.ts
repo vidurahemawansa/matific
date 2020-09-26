@@ -12,6 +12,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { VideoComponent } from './components/modals/video/video.component';
 import { WhyMatificComponent } from './components/why-matific/why-matific.component';
 import { AboutMatificComponent } from './components/about-matific/about-matific.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AboutMatificComponent } from './components/about-matific/about-matific.
     GalleryComponent,
     VideoComponent,
     WhyMatificComponent,
-    AboutMatificComponent
+    AboutMatificComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import { AboutMatificComponent } from './components/about-matific/about-matific.
     NgbModule,
     CarouselModule
   ],
-  providers: [],
+  providers: [SafePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

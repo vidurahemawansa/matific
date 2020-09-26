@@ -4,6 +4,8 @@ import { from, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ApiService } from '../../services/api.service';
 import { CarouselModule } from 'primeng/carousel';
+import { ModalService } from '../../services/modal.service';
+import { VideoComponent } from '../modals/video/video.component';
 
 @Component({
   selector: 'app-gallery',
@@ -17,7 +19,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
   galleries: any;
   responsiveOptions;
 
-  constructor(private api: ApiService, private modalService: NgbModal) {
+  constructor(private api: ApiService, private modalService: NgbModal, private videoModalService:ModalService) {
 
     this.responsiveOptions = [
       {
@@ -55,8 +57,9 @@ export class GalleryComponent implements OnInit, OnDestroy {
     this.$unsubscribe.next();
     this.$unsubscribe.complete();
   }
-  openModal(path:string){
-    console.log(path);
+  openModal(path:string) {
+    this.videoModalService.setModalPath(path);
+    const modalRef = this.modalService.open(VideoComponent);
   }
 
 }

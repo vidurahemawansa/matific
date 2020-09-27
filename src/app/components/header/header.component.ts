@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { LangService } from '../../services/lang.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,8 @@ export class HeaderComponent implements OnInit {
   activeHeader:boolean = false;
   rtl:boolean=false;
   showMobileMenu:boolean=false;
-  constructor() { }
+
+  constructor(private langService:LangService) { }
 
   ngOnInit(): void {
     

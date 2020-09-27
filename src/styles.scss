@@ -2,6 +2,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import "./init";
 @import "./mixins";
+@import './rtl';
 
 .hidden, .desktop-only,.p-carousel .p-carousel-indicators{
     display: none;

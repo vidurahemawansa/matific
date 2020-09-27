@@ -27,11 +27,13 @@ export class HeaderComponent implements OnInit {
   }
 
   changeLan(lang:string){
+    
     if(lang == "en"){
       this.rtl=true;
     }else{
       this.rtl=false;
     }
+    this.langService.setLanguage(this.rtl);
   }
 
   openMenu(){

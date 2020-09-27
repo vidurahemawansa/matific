@@ -50,6 +50,9 @@
         height: 100vh;
         background: rgba(255,255,255,0.95);
         display: none;
+        &.show{
+            display: block;
+        }
         .fa-window-close-o{
             position: absolute;
             right: 5px;

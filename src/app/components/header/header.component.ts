@@ -9,6 +9,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   activeHeader:boolean = false;
   rtl:boolean=false;
+  showMobileMenu:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
@@ -29,5 +30,12 @@ export class HeaderComponent implements OnInit {
     }else{
       this.rtl=false;
     }
+  }
+
+  openMenu(){
+    this.showMobileMenu=true;
+  }
+  closeMenu(){
+    this.showMobileMenu=false;
   }
 }

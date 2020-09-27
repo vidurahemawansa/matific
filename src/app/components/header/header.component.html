@@ -16,12 +16,12 @@
             <i class="fa fa-phone float-l" aria-hidden="true"></i>
             <span class="desktop-only float-l">1300 014 913</span>
         </div>
-        <span class="mobile-only menu-icon-wrapper">
+        <span class="mobile-only menu-icon-wrapper" (click)="openMenu()">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </span>
     </div>
-    <div class="right-wrapper">
-        <i class="fa fa-window-close-o" aria-hidden="true"></i>
+    <div class="right-wrapper" [className]="showMobileMenu ? 'right-wrapper show' : 'right-wrapper'">
+        <i class="fa fa-window-close-o" aria-hidden="true" (click)="closeMenu()"></i>
         <nav class="main-menu">
             <ul>
                 <li><a href="">Math Activities</a></li>

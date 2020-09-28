@@ -1,0 +1,125 @@
+.content-section-wrapper{
+    z-index: 0;
+}
+.svg-icons-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    svg{
+        width: 20px;
+        height: auto;
+        opacity: 0.5;
+        position: absolute;
+        bottom: -100px;
+        left: 10%;
+        animation: rotate 15s infinite;
+        transition-timing-function: ease-in; ;
+        &:nth-child(1){
+            left: 15%;
+            bottom: 0;
+            animation-delay: -2s;
+        }
+        &:nth-child(2){
+            left: 25%;
+            bottom: 25px;
+            animation-delay: -10s;
+        }
+        &:nth-child(3){
+            left: 15%;
+            bottom: -10px;
+            animation-direction: reverse;
+        }
+        &:nth-child(4){
+            left: 50%;
+            bottom: 10vh;
+            animation-delay: -2s;
+        }
+        &:nth-child(5){
+            left: 50%;
+            bottom: -1vh;
+            animation-delay: 1s;
+            animation-direction: reverse;
+        }
+        &:nth-child(6){
+            left: auto;
+            right: 0;
+            bottom: -5vh;
+            animation-delay: -8s;
+        }
+        &:nth-child(7){
+            left: auto;
+            right: 0;
+            bottom: -5vh;
+            animation-delay: -2s;
+            animation-direction: reverse;
+        }
+        &:nth-child(8){
+            left: auto;
+            right: 0;
+            bottom: -5vh;
+            animation-delay: -10s;
+        }
+        &:nth-child(9){
+            left: auto;
+            right: 25%;
+            bottom: 0;
+            animation-delay: -7s;
+        }
+        &:nth-child(10){
+            left: 45%;
+            bottom: 55px;
+            animation-delay: -3s;
+        }
+        &:nth-child(11){
+            right: 65%;
+            left: auto;
+            bottom: -10px;
+            animation-direction: reverse;
+        }
+        &:nth-child(12){
+            left: 40%;
+            bottom: 20vh;
+            animation-delay: -2s;
+            animation-direction: reverse;
+        }
+        &:nth-child(13){
+            left: 100%;
+            bottom: 90vh;
+            animation-delay: -2s;
+            animation-direction: reverse;
+        }
+        &:nth-child(14){
+            left: auto;
+            right: 22%;
+            bottom: -30vh;
+            animation-delay: -1s;
+        }
+        &:nth-child(15){
+            left: auto;
+            right:10%;
+            bottom: -5vh;
+            animation-delay: -2s;
+            animation-direction: reverse;
+        }
+        &:nth-child(16){
+            left: auto;
+            right: 15%;
+            bottom: -25vh;
+            animation-delay: -3s;
+        }
+    }
+}
+
+@keyframes rotate {
+	0% {
+		-webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+    100% {
+		-webkit-transform: translate(-200px, -130vh) rotate(800deg);
+        transform: translate(-200px, -130vh) rotate(800deg);
+	}
+}

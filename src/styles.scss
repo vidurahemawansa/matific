@@ -3,6 +3,7 @@
 @import "./init";
 @import "./mixins";
 @import './rtl';
+@import './animations';
 
 .hidden, .desktop-only,.p-carousel .p-carousel-indicators{
     display: none;

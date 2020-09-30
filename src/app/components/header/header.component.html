@@ -24,14 +24,13 @@
         <i class="fa fa-window-close-o" aria-hidden="true" (click)="closeMenu()"></i>
         <nav class="main-menu">
             <ul>
-                <li><a href="">Math Activities</a></li>
-                <li><a href="">Matific platform</a></li>
-                <li><a href="">Our Pedagogy</a></li>
-                <li><a href="">For Parents</a></li>
+                <li *ngFor='let menuItem of menuItems'><a href="">{{menuItem.name}}</a></li>
             </ul>
         </nav>
-        <button class="btn btn-border">Login</button>
-        <button class="btn btn-fill">Free Trial</button>
+        <button class="btn btn-border">{{contents?.buttons?.login}}</button>
+        <button class="btn btn-fill">{{contents?.buttons?.trial}}</button>
     </div>
-
 </header>
+<div class="spinner-overlay-common" *ngIf="showSpinner">
+    <mat-spinner></mat-spinner>
+  </div>

@@ -1,0 +1,14 @@
+{
+  "menu": [
+    {"name": "Math Activities"},
+    {"name": "Matific Platform"},
+    {"name": "Our Pedagogy"},
+    {"name": "For Parents"}
+  ],
+  "buttons":{"login": "Login", "trial" :"Free Trial"},
+  "title":"Maths educational platform designed by pedagogical experts",
+  "desc": "Personalised maths learning for K-6 students aligned to your local curriculum",
+  "whyText": "Why Matific?",
+  "startTrial":"Start a Free Trial",
+  "tryText":"Try some of our maths activities..."
+}

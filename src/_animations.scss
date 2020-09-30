@@ -123,3 +123,6 @@
         transform: translate(-200px, -130vh) rotate(800deg);
 	}
 }
+.mat-progress-spinner circle{
+    stroke: $prime-color;
+}

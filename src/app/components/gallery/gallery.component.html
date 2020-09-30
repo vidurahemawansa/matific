@@ -1,17 +1,21 @@
 <section class="container-fluid gallery-container">
-  <h2>Try Some of our maths activities...</h2>
-  <p-carousel [value]="galleries" [numVisible]="4" [numScroll]="4" [circular]="true" [responsiveOptions]="responsiveOptions">
+  <h2>{{contents?.tryText}}</h2>
+  <p-carousel [value]="galleries" [numVisible]="4" [numScroll]="4" [circular]="true"
+    [responsiveOptions]="responsiveOptions">
     <ng-template let-gallery pTemplate="item">
       <div class="product-item" (click)="openModal(gallery.episode_url)">
         <div class="product-item-content">
           <img src="{{gallery.thumbnail_url}}" alt="" />
           <h3><a class="gallery-path">
-            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-            <span>{{gallery.title}}</span>
+              <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+              <span>{{gallery.title}}</span>
             </a></h3>
         </div>
       </div>
     </ng-template>
   </p-carousel>
   <div class="white-bg"></div>
+  <div class="spinner-overlay" *ngIf="showSpinner">
+    <mat-spinner></mat-spinner>
+  </div>
 </section>

@@ -66,3 +66,16 @@ h1,h2,h3{
 button{
     outline:none!important
 }
+.spinner-overlay-common{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(255,255,255,.8);
+    text-align: center;
+    z-index: 1;
+    .mat-progress-spinner{
+        margin: 70px auto 0;
+    }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import {LangService} from './services/lang.service';
 
 @Component({
@@ -9,15 +10,29 @@ import {LangService} from './services/lang.service';
 export class AppComponent {
   title = 'matific-test';
 
-  constructor(private langService:LangService) { }
+  constructor(private langService:LangService, private http: HttpClient) { }
   rtl:boolean=false;
+  contents:any;
 
   ngOnInit(): void {
-    this.langService.getLanguage()
-      .subscribe(data => {
-        this.rtl=data;
-        console.log(this.rtl);
-      });
+    this.langService.setLanguage(this.rtl);
+    this.getLanguage();    
+    this.getContent();
   }
+
+  getLanguage(){
+    this.langService.getLanguage()
+    .subscribe(data => {
+      this.rtl=data;
+    });
+  }
+
+  getContent(){
+    this.http.get('./assets/content-en.json')
+        .subscribe(data => {
+          this.contents = data;
+        });
+  }
+
 }
 

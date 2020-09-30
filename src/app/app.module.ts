@@ -13,6 +13,8 @@ import { VideoComponent } from './components/modals/video/video.component';
 import { WhyMatificComponent } from './components/why-matific/why-matific.component';
 import { AboutMatificComponent } from './components/about-matific/about-matific.component';
 import { SafePipe } from './pipes/safe.pipe';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { SafePipe } from './pipes/safe.pipe';
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
-    CarouselModule
+    CarouselModule,
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [SafePipe],
   bootstrap: [AppComponent]

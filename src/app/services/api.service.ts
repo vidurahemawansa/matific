@@ -11,4 +11,7 @@ export class ApiService {
   getGallery() {
     return this.http.get('https://ljifg6p8cd.execute-api.us-east-1.amazonaws.com/production/matific-test-gallery-activities');
   }
+  getContent() {
+    return this.http.get('./assets/content-en.json');
+  }
 }

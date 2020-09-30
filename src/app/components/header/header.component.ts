@@ -10,7 +10,7 @@ import { ApiService } from '../../services/api.service';
   styleUrls: ['./header.component.scss']
 })
 @HostListener("window:scroll", ['$event'])
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   activeHeader: boolean = false;
   rtl: boolean = false;
   contents: any;
